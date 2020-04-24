@@ -8,6 +8,7 @@ class App extends Component {
     this.onChange = this.onChange.bind(this)
 
     this.state = {
+      fulltext: [],
       itens: {
         itemsReturned: []
       },
@@ -19,6 +20,13 @@ class App extends Component {
       // console.log(result.data)
       if(result.data)
         this.setState({ itens: result.data });
+    }).catch((err)=>{
+      console.log(err)
+    })
+    axios.get('http://localhost:3000/fulltext').then((result)=>{
+      console.log(result.data)
+      if(result.data)
+        this.setState({ fulltext: result.data });
     }).catch((err)=>{
       console.log(err)
     })
@@ -35,9 +43,12 @@ class App extends Component {
   }
 
   render() {
-
+    const fulltext = this.state.fulltext
+    // console.log(fulltext)
     const itens  = this.state.itens
+    // console.log(itens)
     let result;
+    
     if(itens && itens.itemsReturned){
       result = itens.itemsReturned.map(element => {
         return (
@@ -48,12 +59,18 @@ class App extends Component {
         )
       });
     }
- 
+    return (
+        <div>
+          {fulltext.map(element => <li>{element.productName}
+          </li>)}
+        </div>
+      );
     return (
       <div>
         <h1>Listar os Filmes</h1>
            <input onChange={this.onChange} />
-        <ul>{result}</ul>
+        {/* <ul>{result}</ul> */}
+        {/* <ul>{fulltext}</ul> */}
       </div>
     );
   };
