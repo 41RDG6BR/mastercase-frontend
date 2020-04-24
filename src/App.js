@@ -25,10 +25,10 @@ class App extends Component {
   }
 
     onChange(event){
-        axios.get("http://localhost:3000/filter"+event.target.value)
+        axios.get("http://localhost:3000/filter?f="+event.target.value)
         .then((result)=>{
-      console.log(result.data)
-      // this.setState({ itens: result.data });
+      // console.log(result.data)
+      this.setState({ itens: result.data });
     }).catch((err)=>{
       console.log(err)
     })
