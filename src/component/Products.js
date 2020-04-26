@@ -8,7 +8,6 @@ class Products extends Component {
     this.onClick = this.onClick.bind(this)
 
     this.state = {
-      fulltext: [],
       itens: {
         itemsReturned: []
       },
@@ -46,23 +45,52 @@ class Products extends Component {
     if(itens && itens.itemsReturned){
       result = itens.itemsReturned.map(element => {
         return (
-          <li key={element.href}>
-            <img src={element.thumbUrl} />
-            <p>{element.name}</p>
-          </li>
+        <div key={element.href} className="col-12 col-md-6 col-lg-3">
+                    <div className="card">
+                        <img className="card-img-top" src={element.thumbUrl} alt="Card image cap" />
+                        <div className="card-body">
+                            <h4 className="card-title"><a href={element.href} title="View Product">{element.name}</a></h4>
+                            <div className="row">
+                                <div className="col">
+                                    <a href={element.href} className="btn btn-success btn-block">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
         )
       });
     }
     return (
       <div>
-        <h1>Listar os Filmes</h1>
-           <input onChange={this.onChange} />
-           {/* <FullText /> */}
-        <ul>{result}</ul>
-        {/* <ul>{fulltext}</ul> */}
-      </div>
+          <div class="container">
+      <br/>
+      <div className="row justify-content-center">
+                            <div className="col-12 col-md-10 col-lg-8">
+                                <form className="card card-sm">
+                                    <div className="card-body row no-gutters align-items-center">
+                                        <div className="col-auto">
+                                            <i className="fas fa-search h4 text-body"></i>
+                                        </div>
+                                
+                                        <div className="col">
+                                            <input onChange={this.onChange} className="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords" />
+                                        </div>
+                                
+                                        <div className="col-auto">
+                                            <button className="btn btn-lg btn-success" type="submit">Search</button>
+                                        </div>                              
+                                    </div>
+                                </form>
+                            </div>             
+                        </div>
+                        <br/>
+        </div>
+                <div className="row">{result}</div>
+        </div>
     );
   };
-};
-
+};            
+   
 export default Products
