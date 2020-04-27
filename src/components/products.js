@@ -52,7 +52,7 @@ class Products extends Component {
                 <h4 className="card-title"><a href={element.href} title="View Product">{element.name}</a></h4>
                   <div className="row">
                     <div className="col">
-                      <a href={element.href} className="btn btn-success btn-block">Add to cart</a>
+                      <a href={element.href} className="btn btn-success btn-block">Link</a>
                     </div>
                   </div>
               </div>

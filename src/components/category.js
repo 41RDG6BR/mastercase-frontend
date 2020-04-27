@@ -33,7 +33,7 @@ class Category extends React.Component{
                   <div className="row">
                     <div className="col">
                       <p className="btn btn-danger btn-block">R${element.items[0].sellers[0].commertialOffer.Installments[0].Value}</p>
-                        <a className="btn btn-success btn-block">Link para o produto</a>
+                        <a className="btn btn-success btn-block">Link</a>
                     </div>
                   </div>
               </div>
