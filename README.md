@@ -6,9 +6,9 @@ logo a seguir estarão dispostas as intruções de como rodar o projeto .
 Logo no início tive problemas para acessar a api pelo frontend sem as permissões necessárias. Com isso parti para o backend, para implementar a primeira rota e testar uma requisição feita pelo backend, porem tive o mesmo problema. 
 Gerei as permissões no cors. ok!
 
-Agora no frontend, agora com acesso a api começo a trabalhar com os objetos retornados, crio os metodos necessários e fragmento a aplicaçao em componentes.
+Agora no frontend, com acesso a api começo a trabalhar com os objetos retornados, crio os métodos necessários e fragmento a aplicaçao em componentes.
 
-Parto para estização, onde tenho o problema seguinte com a centralização dos objetos. 
+Parto para estilização, onde tenho o problema seguinte com a centralização dos objetos. 
 
 ## Técnologias no frontend
 
