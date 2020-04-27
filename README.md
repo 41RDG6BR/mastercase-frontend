@@ -1,3 +1,23 @@
+# Considerações a cerca do projeto 
+
+Quero falar um pouco sobre minha experiência ao realizar o teste master case, e tambem um pouco sobre como foi a tomada de decisões, as dificuldades e desafios com relação a organizão do código,
+logo a seguir estarão dispostas as intruções de como rodar o projeto .
+
+Logo no início tive problemas para acessar a api pelo frontend sem as permissões necessárias. Com isso parti para o backend, para implementar a primeira rota e testar uma requisição feita pelo backend, porem tive o mesmo problema. 
+Gerei as permissões no cors. ok!
+
+Agora no frontend, agora com acesso a api começo a trabalhar com os objetos retornados, crio os metodos necessários e fragmento a aplicaçao em componentes.
+
+Parto para estização, onde tenho o problema seguinte com a centralização dos objetos. 
+
+## Técnologias no frontend
+
+React.js
+
+## Técnologias no backend
+
+Node.js
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
